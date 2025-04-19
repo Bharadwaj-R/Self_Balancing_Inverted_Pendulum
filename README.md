@@ -2,14 +2,14 @@
 
 A self balancing inverted pendulum setup, mounted on a DIY RC car chassis kit. Running on state machines, Arduino Uno and Event Driven Programming (Modular/Interrupt based programming).  
   
-***Project owners***: [Bharadwaj Routhu](https://github.com/Bharadwaj-R), N Nagamallishwar 
+***Project owners***: [Bharadwaj Routhu](https://github.com/Bharadwaj-R), N Nagamallishwar  
 ***Project Associated with***: Centre for Nano Science and Engineering, Indian Institute of Science  
 ***Course Name***: Analog Circuits and Embedded Systems for Sensors  
 ***Course Code***: NE223  
     
-***License***: [MIT License](https://bharadwaj-routhu.mit-license.org/)  
+### ***License***: [MIT License](https://bharadwaj-routhu.mit-license.org/)  
 
-***List of Components Used***:
+### ***List of Components Used***:
 - Arduino Uno  
 - [Mechanix - 0 kit](https://amzn.in/d/9HJ8ecJ) (For pendulum design)
 - [DIY RC car chassis kit]() (4 DC motors, 4 encoder discs, attachments)  
