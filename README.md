@@ -1,6 +1,6 @@
 # Self Balancing Inverted Pendulum Project  
 
-A self balancing inverted pendulum setup, mounted on a DIY RC car chassis kit. Running on state machines, Arduino Uno and Event Driven Programming (Modular/Interrupt based programming).  
+A self balancing inverted pendulum setup, mounted on a DIY RC car chassis kit. Running on state machines, Arduino Uno, PID controller and Event Driven Programming (Modular/Interrupt based programming).  
   
 ***Project owners***: [Bharadwaj Routhu](https://github.com/Bharadwaj-R), N Nagamallishwar  
 ***Project Associated with***: Centre for Nano Science and Engineering, Indian Institute of Science, Bengaluru, India  
