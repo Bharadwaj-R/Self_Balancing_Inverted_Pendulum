@@ -4,7 +4,7 @@ void setup()
 {
     SetupFlex();
     SetupMotors();
-    SetupSpeed();
+    // SetupSpeed();
     Serial.begin(2000000);
 }
 
