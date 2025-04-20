@@ -1,20 +1,18 @@
 #include "MotorController.h"
 
-#define ENABLE_A 3 
-#define INPUT_A1 2
-#define INPUT_A2 4
-
-#define ENABLE_B 11
-#define INPUT_B1 12
-#define INPUT_B2 13
+#define ENABLE_A 3  // High -- for same direction rotation of 2 motors
+#define INPUT_A1 A1 // High -- In1::In4
+#define INPUT_A2 A2 // Low  -- In2::In3
+#define INPUT_B1 12 // Low
+#define INPUT_B2 13 // High
+#define ENABLE_B 11 // High
 
 #define ENABLE_C 5
 #define INPUT_C1 6
 #define INPUT_C2 7
-
-#define ENABLE_D 10
 #define INPUT_D1 9
 #define INPUT_D2 8
+#define ENABLE_D 10
 
 void SetupMotors()
 {
@@ -36,40 +34,51 @@ void SetupMotors()
     
 }
 
+void MotorSpeedControl(int16_t speed)
+{
+    if (speed > 0)
+    {
+        analogWrite(ENABLE_A, speed);
+        analogWrite(ENABLE_B, speed);
+        analogWrite(ENABLE_C, speed);
+        analogWrite(ENABLE_D, speed);
+        MotorRight();
+    }
+    if (speed < 0)
+    {
+        analogWrite(ENABLE_A, -speed);
+        analogWrite(ENABLE_B, -speed);
+        analogWrite(ENABLE_C, -speed);
+        analogWrite(ENABLE_D, -speed);
+        MotorLeft();
+    }
+    return;
+}
+
 void MotorRight()
 {
     digitalWrite(INPUT_A1, HIGH);
     digitalWrite(INPUT_A2, LOW);
 
-    digitalWrite(INPUT_B1, HIGH);
-    digitalWrite(INPUT_B2, LOW);
+    digitalWrite(INPUT_B1, LOW);
+    digitalWrite(INPUT_B2, HIGH);
 
     digitalWrite(INPUT_C1, HIGH);
     digitalWrite(INPUT_C2, LOW);
 
-    digitalWrite(INPUT_D1, HIGH);
-    digitalWrite(INPUT_D2, LOW);
+    digitalWrite(INPUT_D1, LOW);
+    digitalWrite(INPUT_D2, HIGH);
 }
 
 void MotorLeft()
 {
     digitalWrite(INPUT_A1, LOW);
     digitalWrite(INPUT_A2, HIGH);
-
-    digitalWrite(INPUT_B1, LOW);
-    digitalWrite(INPUT_B2, HIGH);
+    digitalWrite(INPUT_B1, HIGH);
+    digitalWrite(INPUT_B2, LOW);
 
     digitalWrite(INPUT_C1, LOW);
     digitalWrite(INPUT_C2, HIGH);
-
-    digitalWrite(INPUT_D1, LOW);
-    digitalWrite(INPUT_D2, HIGH);
-}
-
-void MotorSpeedControl(uint16_t speed)
-{
-    analogWrite(ENABLE_A, speed);
-    analogWrite(ENABLE_B, speed);
-    analogWrite(ENABLE_C, speed);
-    analogWrite(ENABLE_D, speed);
+    digitalWrite(INPUT_D1, HIGH);
+    digitalWrite(INPUT_D2, LOW);
 }
