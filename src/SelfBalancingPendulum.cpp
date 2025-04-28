@@ -6,6 +6,7 @@ void setup()
     SetupMotors();
     // SetupSpeed();
     Serial.begin(2000000);
+    Serial.println("Setup Successful");
 }
 
 void loop()

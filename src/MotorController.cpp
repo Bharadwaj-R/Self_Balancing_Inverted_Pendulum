@@ -14,6 +14,10 @@
 #define INPUT_D2 8
 #define ENABLE_D 10
 
+void MotorLeft();
+void MotorRight();
+
+
 void SetupMotors()
 {
     pinMode(ENABLE_A, OUTPUT);
@@ -44,18 +48,40 @@ void MotorSpeedControl(int16_t speed)
         analogWrite(ENABLE_D, speed);
         MotorRight();
     }
-    if (speed < 0)
+    else if (speed < 0)
     {
-        analogWrite(ENABLE_A, -speed);
-        analogWrite(ENABLE_B, -speed);
-        analogWrite(ENABLE_C, -speed);
-        analogWrite(ENABLE_D, -speed);
+        analogWrite(ENABLE_A, -(speed));
+        analogWrite(ENABLE_B, -(speed));
+        analogWrite(ENABLE_C, -(speed));
+        analogWrite(ENABLE_D, -(speed));
         MotorLeft();
+    }
+    else
+    {
+        analogWrite(ENABLE_A, 0);
+        analogWrite(ENABLE_B, 0);
+        analogWrite(ENABLE_C, 0);
+        analogWrite(ENABLE_D, 0);
     }
     return;
 }
 
 void MotorRight()
+{
+    digitalWrite(INPUT_A1, LOW);
+    digitalWrite(INPUT_A2, HIGH);
+
+    digitalWrite(INPUT_B1, HIGH);
+    digitalWrite(INPUT_B2, LOW);
+    
+    digitalWrite(INPUT_C1, LOW);
+    digitalWrite(INPUT_C2, HIGH);
+
+    digitalWrite(INPUT_D1, HIGH);
+    digitalWrite(INPUT_D2, LOW);
+}
+
+void MotorLeft()
 {
     digitalWrite(INPUT_A1, HIGH);
     digitalWrite(INPUT_A2, LOW);
@@ -65,20 +91,7 @@ void MotorRight()
 
     digitalWrite(INPUT_C1, HIGH);
     digitalWrite(INPUT_C2, LOW);
-
+    
     digitalWrite(INPUT_D1, LOW);
     digitalWrite(INPUT_D2, HIGH);
-}
-
-void MotorLeft()
-{
-    digitalWrite(INPUT_A1, LOW);
-    digitalWrite(INPUT_A2, HIGH);
-    digitalWrite(INPUT_B1, HIGH);
-    digitalWrite(INPUT_B2, LOW);
-
-    digitalWrite(INPUT_C1, LOW);
-    digitalWrite(INPUT_C2, HIGH);
-    digitalWrite(INPUT_D1, HIGH);
-    digitalWrite(INPUT_D2, LOW);
 }

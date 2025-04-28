@@ -1,6 +1,6 @@
 enum StateVariable
 {
-    Init,
+    // Init,
     CheckAngle,
     Balance,
     GiveUp

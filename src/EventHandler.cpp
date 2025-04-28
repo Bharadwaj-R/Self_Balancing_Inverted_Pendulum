@@ -15,7 +15,7 @@ uint32_t lastTime = 0;
 int8_t angle = 0;
 int16_t speedPID = 0;
 
-StateVariable State = Init;
+StateVariable State = CheckAngle;
 
 void StateMachine()
 {
@@ -23,56 +23,60 @@ void StateMachine()
 
     switch(State)
     {
+        /*
         case Init:
         Serial.println("Enter the Init State");
         if(angle == 0)
         {
             State = CheckAngle;
         }
+        delay(1000);
         return;
+        */
 
         /////////////////////////////////////////////////////////////////
 
         case CheckAngle:
-        Serial.println("Enter the Check Angle State");
-        noInterrupts();
+        // Serial.println("Enter the Check Angle State");
         angle = FlexReading();
-        if(abs(angle) > 0 && abs(angle) <= 25)
+        Serial.println("Angle is:");
+        Serial.println(angle);
+        if(abs(angle) <= 40)
         {
             State = Balance;
         }
-        else if(abs(angle) > 25)
+        else if(abs(angle) > 40)
         {
             State = GiveUp;
             lastTime = currentTime;
         }
-        else
-        {
-            State = CheckAngle;
-        }
+        delay(50);
         return;
 
         /////////////////////////////////////////////////////////////////
 
         case Balance:
-        interrupts();
-        Serial.println("Enter the Balance State");
+        // Serial.println("Enter the Balance State");
         speedPID = PIDController(angle);
+        // Serial.println("Speed is:");
+        // Serial.println(speedPID);
         MotorSpeedControl(speedPID);
         State = CheckAngle;
+        delay(50);
         return;
 
         /////////////////////////////////////////////////////////////////
 
         case GiveUp:
         // Wait for 5 seconds and check if the pendulum is in 0 position again. 
-        noInterrupts();
-        Serial.println("Give Up, Waiting for 10 seconds");
-        if(currentTime - lastTime > 5000)
+        MotorSpeedControl(0);
+        // Serial.println("Give Up, Waiting for 5 seconds");
+        if(currentTime - lastTime > 5000)   
         {
             State = CheckAngle;
             lastTime = currentTime;
         }
+        delay(50);
         return;
 
     }
