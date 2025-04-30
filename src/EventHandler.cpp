@@ -2,11 +2,9 @@
 #include "StateMachine.h"
 
 /*
-Init state is the initial state. 
-Once the angle received is not 0, then the system moves into the check angle state.
 In the check angle state, it uses the flex sensors to check for the angle.
-If mod angle is greater than 25, give up the balance.
-If the mod angle is less than 25, go into the balance state.
+If mod angle is greater than 45, give up the balance.
+If the mod angle is less than 45, go into the balance state.
 The balance state calls the PID controller.
 */
 
@@ -30,7 +28,6 @@ void StateMachine()
         {
             State = CheckAngle;
         }
-        delay(1000);
         return;
         */
 

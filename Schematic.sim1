@@ -1,0 +1,75 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-116,-132" rotation="0" hflip="1" vflip="1" label="Arduino Uno" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="VarResistor" CircId="VarResistor-4" mainComp="false" Show_id="true" Show_Val="false" Pos="144,-44" rotation="90" hflip="1" vflip="1" label="Flex Sensor 2" idLabPos="-24.7038,-25.8651" labelrot="0" valLabPos="-16,30" valLabRot="0" Min_Resistance="1e-12 Ω" Max_Resistance="1 kΩ" Value_Ohm="1e-12 Ω" Dial_Step="0 Ω" Slider="false" Scale="1" />
+
+<item itemtype="VarResistor" CircId="VarResistor-3" mainComp="false" Show_id="true" Show_Val="false" Pos="144,-136" rotation="90" hflip="1" vflip="1" label="Flex Sensor 1" idLabPos="-25.3255,-26.4868" labelrot="0" valLabPos="-16,30" valLabRot="0" Min_Resistance="1e-12 Ω" Max_Resistance="1 kΩ" Value_Ohm="1e-12 Ω" Dial_Step="0 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Tunnel" CircId="Tunnel-9" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-92" rotation="0" hflip="1" vflip="1" label="Motor Driver Enable A" idLabPos="-129.149,-9.07925" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-10" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-20" rotation="0" hflip="1" vflip="1" label="Motor Driver Enable B" idLabPos="-129.149,-9.07925" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-11" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-76" rotation="0" hflip="1" vflip="1" label="Motor Driver Enable C" idLabPos="-129.149,-9.07925" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-12" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-28" rotation="0" hflip="1" vflip="1" label="Motor Driver Enable D" idLabPos="-129.149,-9.07925" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-13" mainComp="false" Show_id="true" Show_Val="false" Pos="184,-84" rotation="0" hflip="-1" vflip="1" label="EnA I/P 1" idLabPos="-75.0613,-7.83585" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-14" mainComp="false" Show_id="true" Show_Val="false" Pos="184,-92" rotation="0" hflip="-1" vflip="1" label="EnA I/P 2" idLabPos="-74.4396,-9.07925" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-15" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-60" rotation="0" hflip="1" vflip="1" label="EnC I/P2" idLabPos="-75.0613,-7.83585" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-16" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-68" rotation="0" hflip="1" vflip="1" label="EnC I/P 1" idLabPos="-75.0613,-7.83585" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-17" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-4" rotation="0" hflip="1" vflip="1" label="EnB I/P 4" idLabPos="-75.0613,-7.83585" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-18" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-12" rotation="0" hflip="1" vflip="1" label="EnB I/P 3" idLabPos="-75.0613,-7.83585" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-19" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-36" rotation="0" hflip="1" vflip="1" label="EnD I/P 3" idLabPos="-75.683,-9.07925" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-20" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-44" rotation="0" hflip="1" vflip="1" label="EnD I/P4" idLabPos="-75.0613,-9.70095" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Tunnel" CircId="Tunnel-22" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-100" rotation="0" hflip="1" vflip="1" label="RPM Sensor Interrupt" idLabPos="-124.797,-10.3226" labelrot="0" valLabPos="-16,20" valLabRot="0" IsBus="false" />
+
+<item itemtype="Node" CircId="Node-5" mainComp="false" Pos="144,-76" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Uno-2-GND1" endpinid="VarResistor-4-rPin" pointList="36,-44,48,-44,48,-12,144,-12,144,-28" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Uno-2-5V0" endpinid="VarResistor-3-lPin" pointList="36,-36,72,-36,72,-168,144,-168,144,-152" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Node-5-2" endpinid="VarResistor-4-lPin" pointList="144,-76,144,-60" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Uno-2-A0" endpinid="Node-5-0" pointList="36,-76,144,-76" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="VarResistor-3-rPin" endpinid="Node-5-1" pointList="144,-120,144,-76" />
+
+<item itemtype="Connector" uid="Connector-19" startpinid="Tunnel-9-pin" endpinid="Uno-2-3" pointList="-212,-92,-108,-92" />
+
+<item itemtype="Connector" uid="Connector-21" startpinid="Tunnel-10-pin" endpinid="Uno-2-11" pointList="-212,-20,-108,-20" />
+
+<item itemtype="Connector" uid="Connector-22" startpinid="Tunnel-11-pin" endpinid="Uno-2-5" pointList="-212,-76,-108,-76" />
+
+<item itemtype="Connector" uid="Connector-23" startpinid="Tunnel-12-pin" endpinid="Uno-2-10" pointList="-212,-28,-108,-28" />
+
+<item itemtype="Connector" uid="Connector-24" startpinid="Tunnel-13-pin" endpinid="Uno-2-A1" pointList="184,-84,36,-84" />
+
+<item itemtype="Connector" uid="Connector-25" startpinid="Tunnel-14-pin" endpinid="Uno-2-A2" pointList="184,-92,36,-92" />
+
+<item itemtype="Connector" uid="Connector-26" startpinid="Tunnel-18-pin" endpinid="Uno-2-12" pointList="-212,-12,-108,-12" />
+
+<item itemtype="Connector" uid="Connector-27" startpinid="Tunnel-17-pin" endpinid="Uno-2-13" pointList="-212,-4,-108,-4" />
+
+<item itemtype="Connector" uid="Connector-28" startpinid="Tunnel-15-pin" endpinid="Uno-2-7" pointList="-212,-60,-108,-60" />
+
+<item itemtype="Connector" uid="Connector-29" startpinid="Tunnel-16-pin" endpinid="Uno-2-6" pointList="-212,-68,-108,-68" />
+
+<item itemtype="Connector" uid="Connector-30" startpinid="Tunnel-19-pin" endpinid="Uno-2-9" pointList="-212,-36,-108,-36" />
+
+<item itemtype="Connector" uid="Connector-31" startpinid="Tunnel-20-pin" endpinid="Uno-2-8" pointList="-212,-44,-108,-44" />
+
+<item itemtype="Connector" uid="Connector-34" startpinid="Tunnel-22-pin" endpinid="Uno-2-2" pointList="-212,-100,-108,-100" />
+
+</circuit>

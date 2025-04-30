@@ -11,9 +11,12 @@ differentiation to obtian the values of P, I and D.
 
 The final output from the PID will be the speed of the motor to be controlled. This can
 be achieved by adding the P, I and D individual parts.
+
+Due to the motion of the cart, a self looping feedback is established.
 */
 
 // Calculations for the PID constants in the assets folder
+
 #define Kp_base 1.5     // Proportional Gain constant
 #define Kd_base 0.3     // Differential Gain constant
 #define Ki 0.01         // Integral Gain constant
